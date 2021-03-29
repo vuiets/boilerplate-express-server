@@ -19,7 +19,7 @@ const RDR2 = {
                 const matchedString = match[0];
                 if ( matchedString ) {
                     const matchWord = matchedString.match(WORD_REGEX);
-                    const link = origin + matchWord[1];
+                    const link = matchWord[1].indexOf("http") < 0 ? origin + matchWord[1] : matchWord[1];
                     const word = matchWord[2];
                     if (wordLinks.filter((ele) => ele.word && ele.word.toUpperCase() === word.toUpperCase() ).length === 0 )
                         wordLinks.push({ link, word });
