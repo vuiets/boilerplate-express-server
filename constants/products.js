@@ -11,6 +11,7 @@ const RDR2 = {
         let sections = [];
         let wordLinks = [];
         const wordRegex = `<a.*?href="([\\s\\S]+?)".*?>([\\s\\S]+?)<\/a>`;
+        const origin = "https://ign.com";
         const getWordLinks = (text) => {
             const WORD_REGEX = new RegExp(wordRegex);
             let match = WORD_REGEX.exec(text);
@@ -18,7 +19,7 @@ const RDR2 = {
                 const matchedString = match[0];
                 if ( matchedString ) {
                     const matchWord = matchedString.match(WORD_REGEX);
-                    const link = matchWord[1];
+                    const link = origin + matchWord[1];
                     const word = matchWord[2];
                     if (wordLinks.filter((ele) => ele.word && ele.word.toUpperCase() === word.toUpperCase() ).length === 0 )
                         wordLinks.push({ link, word });
