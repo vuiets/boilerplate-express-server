@@ -1,7 +1,7 @@
 {
-	"name": "rdo2-news-scraper",
-	"version": "1.0.0",
-	"description": "🥡 A scraper for Red Dead Redemption 2 updates from IGN.",
+	"name": "boilerplate-express",
+	"version": "0.1.0",
+	"description": "Boilerplate code for ExpressJS server.",
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
