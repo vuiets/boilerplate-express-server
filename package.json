@@ -1,11 +1,31 @@
 {
-  "dependencies": {
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.5",
-    "express": "^4.17.1",
-    "lodash": "^4.17.21",
-    "mysql": "^2.18.1",
-    "node-fetch": "^2.6.1",
-    "puppeteer": "^8.0.0"
-  }
+	"name": "rdo2-news-scraper",
+	"version": "1.0.0",
+	"description": "🥡 A scraper for Red Dead Redemption 2 updates from IGN.",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vuiets/rdo2-news-scraper.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/vuiets/rdo2-news-scraper/issues"
+	},
+	"homepage": "https://github.com/vuiets/rdo2-news-scraper#readme",
+	"devDependencies": {
+		"@babel/core": "^7.13.14",
+		"@babel/node": "^7.13.13",
+		"@babel/preset-env": "^7.13.12",
+		"nodemon": "^2.0.7"
+	},
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1"
+	}
 }
