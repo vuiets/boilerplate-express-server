@@ -1,10 +1,28 @@
+import dotenv from 'dotenv';
 import express from 'express';
+import cors from 'cors';
+
+dotenv.config();
 
 const app = express(),
-	port = 3000;
+	{ PORT } = process.env;
+
+app.use(cors());
 
 app.get('/', (req, res) => {
-	res.send('Hello World!');
+	return res.send('Received a GET HTTP method');
 });
 
-app.listen(port, () => console.log('barebones app is listening to port 3000!'));
+app.post('/', (req, res) => {
+	return res.send('Received a POST HTTP method');
+});
+
+app.put('/', (req, res) => {
+	return res.send('Received a PUT HTTP method');
+});
+
+app.delete('/', (req, res) => {
+	return res.send('Received a DELETE HTTP method');
+});
+
+app.listen(PORT, () => console.log('barebones app is listening to port 3000!'));

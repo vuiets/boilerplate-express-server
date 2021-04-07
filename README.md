@@ -1,2 +1,2 @@
 # boilerplate-express-server
-A boilerplate for Express server setup.
+🏗️ A boilerplate for Express server setup.
